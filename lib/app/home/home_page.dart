@@ -1,6 +1,6 @@
 import 'package:desafio_modulo_flutter/app/home/components/header_address.dart';
-import 'package:desafio_modulo_flutter/app/home/components/menu_list.dart';
-import 'package:desafio_modulo_flutter/app/home/components/menu_select.dart';
+import 'package:desafio_modulo_flutter/app/home/tiles/menu_list.dart';
+import 'package:desafio_modulo_flutter/app/home/tiles/menu_select.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
