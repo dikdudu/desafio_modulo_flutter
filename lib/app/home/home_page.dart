@@ -1,3 +1,4 @@
+import 'package:desafio_modulo_flutter/app/home/components/menu_list.dart';
 import 'package:desafio_modulo_flutter/app/home/components/menu_select.dart';
 import 'package:flutter/material.dart';
 
@@ -18,16 +19,7 @@ class _HomePageState extends State<HomePage> {
       title: Text('Escolha uma Revenda'),
       actions: [
         MenuSelect(),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 14, 10, 15),
-          child: InkWell(
-            onTap: () {},
-            child: Text(
-              '?',
-              style: TextStyle(fontSize: 25, color: Colors.white),
-            ),
-          ),
-        ),
+        MenuList(),
       ],
     );
 
