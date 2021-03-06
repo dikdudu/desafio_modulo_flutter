@@ -3,6 +3,8 @@ import 'package:desafio_modulo_flutter/app/home/tiles/menu_list.dart';
 import 'package:desafio_modulo_flutter/app/home/tiles/menu_select.dart';
 import 'package:flutter/material.dart';
 
+import 'components/list_cards.dart';
+
 class HomePage extends StatefulWidget {
   static String routerName = '/';
 
@@ -27,6 +29,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           HeaderAddress(),
+          ListCards(),
         ],
       ),
     );
