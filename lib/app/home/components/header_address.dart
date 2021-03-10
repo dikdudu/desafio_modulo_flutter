@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class HeaderAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
+    // var screenHeight = MediaQuery.of(context).size.height;
     // var statusBarHeight = MediaQuery.of(context).padding.top;
-    print(screenHeight);
+
     return Container(
       padding: EdgeInsets.all(15),
       color: Colors.white,
