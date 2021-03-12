@@ -2,6 +2,7 @@ import 'package:desafio_modulo_flutter/app/home/components/header_address.dart';
 import 'package:desafio_modulo_flutter/app/home/tiles/menu_list.dart';
 import 'package:desafio_modulo_flutter/app/home/tiles/menu_select.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'components/list_cards.dart';
 
@@ -16,7 +17,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget appBar = AppBar(
-      title: Text('Escolha uma Revenda'),
+      title: Text(
+        'Escolha uma Revenda',
+        style: TextStyle(fontSize: 60.sp),
+      ),
       actions: [
         MenuSelect(),
         MenuList(),

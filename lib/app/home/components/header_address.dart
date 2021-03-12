@@ -8,9 +8,8 @@ class HeaderAddress extends StatelessWidget {
     // var statusBarHeight = MediaQuery.of(context).padding.top;
 
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(18),
       color: Colors.white,
-      height: 250.h,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,

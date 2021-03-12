@@ -26,16 +26,17 @@ class InfoColumn extends StatelessWidget {
           title,
           style: TextStyle(
             color: Colors.grey,
-            fontSize: 40.sp,
+            fontSize: 35.sp,
           ),
         ),
+        SizedBox(height: 8.h),
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
               text,
               style: TextStyle(
-                fontSize: 70.sp,
+                fontSize: 65.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
