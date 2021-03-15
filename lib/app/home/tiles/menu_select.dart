@@ -7,6 +7,7 @@ class MenuSelect extends StatefulWidget {
 
 class _MenuSelectState extends State<MenuSelect> {
   bool _fisValue = false;
+  final List<String> filtros = ['Melhor Avaliação', 'Mais Rápido', 'Mais Barato'];
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
@@ -14,12 +15,12 @@ class _MenuSelectState extends State<MenuSelect> {
         return [
           PopupMenuItem(
             child: Column(
-              children: [
-                Row(
+              children: filtros.map((f) {
+                return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Melhor Avaliação',
+                      f,
                       style: TextStyle(
                         color: Colors.blue,
                       ),
@@ -29,38 +30,8 @@ class _MenuSelectState extends State<MenuSelect> {
                       value: _fisValue,
                     ),
                   ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Mais rápido',
-                      style: TextStyle(
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Checkbox(
-                      onChanged: (bool value) {},
-                      value: _fisValue,
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Mais barato',
-                      style: TextStyle(
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Checkbox(
-                      onChanged: (bool value) {},
-                      value: _fisValue,
-                    ),
-                  ],
-                ),
-              ],
+                );
+              }).toList(),
             ),
           ),
         ];
