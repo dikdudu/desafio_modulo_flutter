@@ -92,8 +92,8 @@ class _ListCardsState extends State<ListCards> {
                                       decoration: BoxDecoration(
                                         color: Colors.orangeAccent,
                                         borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5.h),
-                                          bottomLeft: Radius.circular(5.h),
+                                          topLeft: Radius.circular(10.h),
+                                          bottomLeft: Radius.circular(10.h),
                                         ),
                                       ),
                                       child: Row(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'details/details_page.dart';
 import 'home/home_page.dart';
 
 class MainApp extends StatelessWidget {
@@ -16,7 +17,16 @@ class MainApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomePage(),
+        home: DetailsPage(),
+        onGenerateRoute: (settings) {
+          var page;
+          switch (settings.name) {
+            case '/':
+              page = HomePage();
+              break;
+          }
+          return MaterialPageRoute(builder: (_) => page);
+        },
       ),
     );
   }
