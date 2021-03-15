@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:desafio_modulo_flutter/app/details/details_page.dart';
 import 'package:desafio_modulo_flutter/app/home/tiles/info_column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,7 +34,10 @@ class _ListCardsState extends State<ListCards> {
           return Column(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed(DetailsPage.routerName);
+
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,

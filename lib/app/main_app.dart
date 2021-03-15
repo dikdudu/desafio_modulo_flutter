@@ -17,12 +17,17 @@ class MainApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: DetailsPage(),
+        home: HomePage(),
         onGenerateRoute: (settings) {
           var page;
           switch (settings.name) {
             case '/':
               page = HomePage();
+              break;
+          }
+          switch (settings.name) {
+            case '/details':
+              page = DetailsPage();
               break;
           }
           return MaterialPageRoute(builder: (_) => page);

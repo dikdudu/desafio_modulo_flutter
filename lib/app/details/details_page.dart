@@ -2,6 +2,8 @@ import 'package:desafio_modulo_flutter/app/details/components/status_circle.dart
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
+  static String routerName = "/details";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
