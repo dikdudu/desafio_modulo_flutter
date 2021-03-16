@@ -15,18 +15,20 @@ class _MenuSelectState extends State<MenuSelect> {
         return [
           PopupMenuItem(
             child: Column(
-              children: filtros.map((f) {
+              children: filtros.map((item) {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      f,
+                      item,
                       style: TextStyle(
                         color: Colors.blue,
                       ),
                     ),
                     Checkbox(
-                      onChanged: (bool value) {},
+                      onChanged: (bool value) {
+
+                      },
                       value: _fisValue,
                     ),
                   ],

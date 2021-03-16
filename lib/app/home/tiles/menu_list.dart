@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MenuList extends StatelessWidget {
+  final List<String> items = ['Suporte', 'Termos de serviço'];
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
@@ -12,24 +13,16 @@ class MenuList extends StatelessWidget {
         ),
       ),
       itemBuilder: (BuildContext build) {
-        return [
-          PopupMenuItem(
+        return items.map((item) {
+          return PopupMenuItem(
             child: Text(
-              'Suporte',
+              item,
               style: TextStyle(
                 color: Colors.blue,
               ),
             ),
-          ),
-          PopupMenuItem(
-            child: Text(
-              'Termos de serviço',
-              style: TextStyle(
-                color: Colors.blue,
-              ),
-            ),
-          ),
-        ];
+          );
+        }).toList();
       },
     );
   }
