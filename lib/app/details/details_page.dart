@@ -1,4 +1,5 @@
-import 'package:desafio_modulo_flutter/app/details/components/status_circle.dart';
+import 'package:desafio_modulo_flutter/app/details/components/status_buy.dart';
+import 'file:///C:/Users/Eduardo/Documents/AcademiaFlutter/modulo_flutter/desafio_modulo_flutter/lib/app/details/tiles/status_circle.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -28,32 +29,7 @@ class DetailsPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            color: Colors.white,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                StatusCircle(text: 'Comprar', active: true),
-                Expanded(
-                  child: Divider(
-                    color: Colors.black,
-                    endIndent: 5,
-                    indent: 5,
-                  ),
-                ),
-                StatusCircle(text: 'Pagamento', active: false),
-                Expanded(
-                  child: Divider(
-                    color: Colors.black,
-                    endIndent: 5,
-                    indent: 5,
-                  ),
-                ),
-                StatusCircle(text: 'Confirmação', active: false),
-              ],
-            ),
-          ),
+          StatusBuy(),
           Container(
             margin: EdgeInsets.only(top: 5),
             padding: EdgeInsets.all(20),
