@@ -36,7 +36,6 @@ class _ListCardsState extends State<ListCards> {
               InkWell(
                 onTap: () {
                   Navigator.of(context).pushNamed(DetailsPage.routerName);
-
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -132,26 +131,30 @@ class _ListCardsState extends State<ListCards> {
                                       title: 'Nota',
                                       text: dados[index]['nota'].toString(),
                                       icon: Icons.star,
-                                      money: false,
                                     ),
                                     InfoColumn(
                                       title: 'Tempo Médio',
                                       text: dados[index]['tempoMedio'],
-                                      money: false,
                                       isTemp: true,
                                     ),
-                                    Text(
-                                      'R\$',
-                                      style: TextStyle(
-                                        fontSize: 65.sp,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    InfoColumn(
-                                      title: 'Preço',
-                                      text: dados[index]['preco']
-                                          .toStringAsFixed(2),
-                                      money: true,
+                                    Column(
+                                      children: [
+                                        Text(
+                                          'Preço',
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 35.sp,
+                                          ),
+                                        ),
+                                        SizedBox(height: 8.h),
+                                        Text(
+                                          'R\$ ${dados[index]['preco'].toStringAsFixed(2)}',
+                                          style: TextStyle(
+                                            fontSize: 65.sp,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),

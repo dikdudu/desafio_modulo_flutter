@@ -24,10 +24,7 @@ class HeaderAddress extends StatelessWidget {
               ),
               Text(
                 'Av Paulista, 1001',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 50.sp,
-                ),
+                style: TextStyle(color: Colors.black, fontSize: 50.sp),
               ),
               Text(
                 'Paulista, São Paulo, SP',
@@ -41,17 +38,10 @@ class HeaderAddress extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.place,
-                    color: Colors.blue,
-                    size: 90.sp,
-                  ),
+                  Icon(Icons.place, color: Colors.blue, size: 90.sp),
                   Text(
                     'Mudar',
-                    style: TextStyle(
-                      fontSize: 35.sp,
-                      color: Colors.blue,
-                    ),
+                    style: TextStyle(fontSize: 35.sp, color: Colors.blue),
                   ),
                 ],
               ),

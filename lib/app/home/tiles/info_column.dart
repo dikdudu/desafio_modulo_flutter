@@ -5,7 +5,6 @@ class InfoColumn extends StatelessWidget {
   final String title;
   final String text;
   final IconData icon;
-  final bool money;
   final bool isTemp;
 
   const InfoColumn({
@@ -13,8 +12,7 @@ class InfoColumn extends StatelessWidget {
     this.title,
     this.text,
     this.icon,
-    this.money,
-    this.isTemp,
+    this.isTemp = false ,
   }) : super(key: key);
 
   @override
@@ -33,11 +31,14 @@ class InfoColumn extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Text(
-              text,
-              style: TextStyle(
-                fontSize: 65.sp,
-                fontWeight: FontWeight.bold,
+            Visibility(
+              visible: isTemp == false,
+              child: Text(
+                text,
+                style: TextStyle(
+                  fontSize: 65.sp,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Visibility(
@@ -49,10 +50,21 @@ class InfoColumn extends StatelessWidget {
               ),
             ),
             Visibility(
-              visible: isTemp != null,
-              child: Text(
-                'min',
-                style: TextStyle(fontSize: 30.sp, color: Colors.grey),
+              visible: isTemp,
+              child: RichText(
+                text:
+                    TextSpan(style: TextStyle(color: Colors.black), children: [
+                  TextSpan(
+                    text: text,
+                    style:
+                        TextStyle(fontSize: 65.sp, fontWeight: FontWeight.bold),
+                  ),
+                  TextSpan(
+                    text: 'min',
+                    style:
+                        TextStyle(fontSize: 30.sp, color: Colors.grey),
+                  ),
+                ]),
               ),
             ),
           ],
