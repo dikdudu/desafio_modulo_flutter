@@ -10,33 +10,24 @@ class StatusCircle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        active
-            ? Container(
-                margin: EdgeInsets.only(bottom: 15),
-                height: 20,
-                width: 20,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(100),
-                  boxShadow: [
+        Container(
+          margin: EdgeInsets.only(bottom: 15),
+          height: 20,
+          width: 20,
+          decoration: BoxDecoration(
+            color: active ? Colors.blue : Colors.white,
+            borderRadius: BorderRadius.circular(100),
+            border: !active ? Border.all(color: Colors.grey) : null,
+            boxShadow: active
+                ? [
                     BoxShadow(
                         blurRadius: 1,
                         spreadRadius: 10,
                         color: Colors.grey[300])
-                  ],
-                ),
-              )
-            : Container(
-                margin: EdgeInsets.only(bottom: 15),
-                height: 20,
-                width: 20,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-              ),
+                  ]
+                : null,
+          ),
+        ),
         Text(text),
       ],
     );
